@@ -178,6 +178,9 @@ every advisory call is written to a hash-chained audit record that
 
 ## Documentation
 
+- **[`explain.md`](explain.md)** — the whole project in plain English: what the
+  problem was, how each piece solves it, and what every technology is for.
+  Start here if you want the reasoning rather than the spec.
 - **[`readme_E-IDSS.md`](readme_E-IDSS.md)** — full architecture, approach,
   evaluation, reproducibility notes, and the documented known limitation.
 - **[`ps Industries and automation.docx`](ps%20Industries%20and%20automation.docx)** — the
