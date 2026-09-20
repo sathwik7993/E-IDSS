@@ -1,0 +1,16 @@
+{
+  "id": "sathwikchappala/e-idss-train",
+  "title": "E-IDSS Train",
+  "code_file": "train_kernel.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "accelerator": "nvidiaTeslaT4x2",
+  "enable_internet": true,
+  "dataset_sources": [
+    "sathwikchappala/eidss-surface-defect"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

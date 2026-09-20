@@ -1,0 +1,68 @@
+services:
+  backend:
+    build:
+      # Root context: the image needs ai/ and models/ alongside backend/, and
+      # the Dockerfile reproduces that layout so config.py's path arithmetic
+      # works identically in and out of a container.
+      context: .
+      dockerfile: backend/Dockerfile
+    container_name: eidss-backend
+    ports:
+      - "${API_PORT:-8000}:8000"
+    environment:
+      # ai/ and models/ are bind-mounted rather than baked in, so the image
+      # builds before training finishes and weights can be swapped without a
+      # rebuild. PYTHONPATH makes the mounted ai/ package importable.
+      PYTHONPATH: /app
+      MODEL_WEIGHTS_PATH: /app/models/convnext_tiny_eidss.pt
+      TORCH_DEVICE: cpu
+      IMG_SIZE: "224"
+      SYNTHETIC_SEED: "${SYNTHETIC_SEED:-1337}"
+    volumes:
+      - ./ai:/app/ai:ro
+      - ./models:/app/models:ro
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request;urllib.request.urlopen('http://localhost:8000/api/health')\""]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 40s
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    container_name: eidss-gateway
+    ports:
+      - "${GATEWAY_PORT:-8080}:8080"
+    environment:
+      BACKEND_URL: "http://backend:8000"
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "wget -qO- http://localhost:8080/actuator/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+      start_period: 30s
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        # Points at the API directly, not the gateway. The gateway is the
+        # governance tier and is demonstrated on its own port; keeping the
+        # console on the direct path means a gateway problem cannot take the
+        # inspection demo down with it.
+        VITE_API_BASE_URL: "http://localhost:${API_PORT:-8000}"
+    container_name: eidss-frontend
+    ports:
+      - "${WEB_PORT:-5173}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    restart: unless-stopped

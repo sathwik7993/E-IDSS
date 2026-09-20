@@ -1,0 +1,733 @@
+{
+  "robustness": {
+    "clean": {
+      "accuracy": 0.9988889098167419,
+      "macro_f1": 0.9988881119151287,
+      "per_class": {
+        "crack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "hole": {
+          "precision": 0.997229916897507,
+          "recall": 1.0,
+          "f1-score": 0.9986130374479889,
+          "support": 360.0
+        },
+        "normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "rust": {
+          "precision": 1.0,
+          "recall": 0.9944444444444445,
+          "f1-score": 0.9972144846796658,
+          "support": 360.0
+        },
+        "scratch": {
+          "precision": 0.997229916897507,
+          "recall": 1.0,
+          "f1-score": 0.9986130374479889,
+          "support": 360.0
+        },
+        "accuracy": 0.9988888888888889,
+        "macro avg": {
+          "precision": 0.9988919667590028,
+          "recall": 0.9988888888888889,
+          "f1-score": 0.9988881119151287,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.9988919667590027,
+          "recall": 0.9988888888888889,
+          "f1-score": 0.9988881119151286,
+          "support": 1800.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          360,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          360,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          360,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          358,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          360
+        ]
+      ],
+      "false_accept_count": 0,
+      "false_reject_count": 0,
+      "false_accept_rate": 0.0,
+      "false_reject_rate": 0.0,
+      "mean_confidence": 0.9994690418243408
+    },
+    "bright_lighting": {
+      "accuracy": 0.9977777600288391,
+      "macro_f1": 0.9977785258427918,
+      "per_class": {
+        "crack": {
+          "precision": 1.0,
+          "recall": 0.9944444444444445,
+          "f1-score": 0.9972144846796658,
+          "support": 360.0
+        },
+        "hole": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "normal": {
+          "precision": 0.997229916897507,
+          "recall": 1.0,
+          "f1-score": 0.9986130374479889,
+          "support": 360.0
+        },
+        "rust": {
+          "precision": 1.0,
+          "recall": 0.9944444444444445,
+          "f1-score": 0.9972144846796658,
+          "support": 360.0
+        },
+        "scratch": {
+          "precision": 0.9917355371900827,
+          "recall": 1.0,
+          "f1-score": 0.995850622406639,
+          "support": 360.0
+        },
+        "accuracy": 0.9977777777777778,
+        "macro avg": {
+          "precision": 0.997793090817518,
+          "recall": 0.9977777777777778,
+          "f1-score": 0.9977785258427918,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.9977930908175179,
+          "recall": 0.9977777777777778,
+          "f1-score": 0.9977785258427919,
+          "support": 1800.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          358,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          360,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          360,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          358,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          360
+        ]
+      ],
+      "false_accept_count": 1,
+      "false_reject_count": 0,
+      "false_accept_rate": 0.0006944444444444445,
+      "false_reject_rate": 0.0,
+      "mean_confidence": 0.9988308548927307
+    },
+    "dim_lighting": {
+      "accuracy": 0.9988889098167419,
+      "macro_f1": 0.9988896551458435,
+      "per_class": {
+        "crack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "hole": {
+          "precision": 1.0,
+          "recall": 0.9972222222222222,
+          "f1-score": 0.9986091794158554,
+          "support": 360.0
+        },
+        "normal": {
+          "precision": 0.994475138121547,
+          "recall": 1.0,
+          "f1-score": 0.997229916897507,
+          "support": 360.0
+        },
+        "rust": {
+          "precision": 1.0,
+          "recall": 0.9972222222222222,
+          "f1-score": 0.9986091794158554,
+          "support": 360.0
+        },
+        "scratch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "accuracy": 0.9988888888888889,
+        "macro avg": {
+          "precision": 0.9988950276243095,
+          "recall": 0.9988888888888889,
+          "f1-score": 0.9988896551458435,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.9988950276243094,
+          "recall": 0.9988888888888889,
+          "f1-score": 0.9988896551458436,
+          "support": 1800.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          360,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          359,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          360,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          359,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          360
+        ]
+      ],
+      "false_accept_count": 2,
+      "false_reject_count": 0,
+      "false_accept_rate": 0.001388888888888889,
+      "false_reject_rate": 0.0,
+      "mean_confidence": 0.9993941783905029
+    },
+    "low_contrast": {
+      "accuracy": 0.9983333349227905,
+      "macro_f1": 0.998334857300432,
+      "per_class": {
+        "crack": {
+          "precision": 1.0,
+          "recall": 0.9972222222222222,
+          "f1-score": 0.9986091794158554,
+          "support": 360.0
+        },
+        "hole": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "normal": {
+          "precision": 0.9917355371900827,
+          "recall": 1.0,
+          "f1-score": 0.995850622406639,
+          "support": 360.0
+        },
+        "rust": {
+          "precision": 1.0,
+          "recall": 0.9944444444444445,
+          "f1-score": 0.9972144846796658,
+          "support": 360.0
+        },
+        "scratch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "accuracy": 0.9983333333333333,
+        "macro avg": {
+          "precision": 0.9983471074380166,
+          "recall": 0.9983333333333334,
+          "f1-score": 0.998334857300432,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.9983471074380166,
+          "recall": 0.9983333333333333,
+          "f1-score": 0.9983348573004319,
+          "support": 1800.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          359,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          360,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          360,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          2,
+          358,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          360
+        ]
+      ],
+      "false_accept_count": 3,
+      "false_reject_count": 0,
+      "false_accept_rate": 0.0020833333333333333,
+      "false_reject_rate": 0.0,
+      "mean_confidence": 0.9998720288276672
+    },
+    "rotated_15deg": {
+      "accuracy": 0.9988889098167419,
+      "macro_f1": 0.9988888803154345,
+      "per_class": {
+        "crack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "hole": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "normal": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "rust": {
+          "precision": 1.0,
+          "recall": 0.9944444444444445,
+          "f1-score": 0.9972144846796658,
+          "support": 360.0
+        },
+        "scratch": {
+          "precision": 0.994475138121547,
+          "recall": 1.0,
+          "f1-score": 0.997229916897507,
+          "support": 360.0
+        },
+        "accuracy": 0.9988888888888889,
+        "macro avg": {
+          "precision": 0.9988950276243094,
+          "recall": 0.9988888888888889,
+          "f1-score": 0.9988888803154345,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.9988950276243094,
+          "recall": 0.9988888888888889,
+          "f1-score": 0.9988888803154345,
+          "support": 1800.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          360,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          360,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          360,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          358,
+          2
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          360
+        ]
+      ],
+      "false_accept_count": 0,
+      "false_reject_count": 0,
+      "false_accept_rate": 0.0,
+      "false_reject_rate": 0.0,
+      "mean_confidence": 0.9994669556617737
+    },
+    "rotated_90deg": {
+      "accuracy": 0.9988889098167419,
+      "macro_f1": 0.9988888878172133,
+      "per_class": {
+        "crack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "hole": {
+          "precision": 0.9972222222222222,
+          "recall": 0.9972222222222222,
+          "f1-score": 0.9972222222222222,
+          "support": 360.0
+        },
+        "normal": {
+          "precision": 0.997229916897507,
+          "recall": 1.0,
+          "f1-score": 0.9986130374479889,
+          "support": 360.0
+        },
+        "rust": {
+          "precision": 1.0,
+          "recall": 0.9972222222222222,
+          "f1-score": 0.9986091794158554,
+          "support": 360.0
+        },
+        "scratch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "accuracy": 0.9988888888888889,
+        "macro avg": {
+          "precision": 0.9988904278239458,
+          "recall": 0.9988888888888889,
+          "f1-score": 0.9988888878172133,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.9988904278239458,
+          "recall": 0.9988888888888889,
+          "f1-score": 0.9988888878172132,
+          "support": 1800.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          360,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          359,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          360,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          359,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          360
+        ]
+      ],
+      "false_accept_count": 1,
+      "false_reject_count": 0,
+      "false_accept_rate": 0.0006944444444444445,
+      "false_reject_rate": 0.0,
+      "mean_confidence": 0.9999521374702454
+    },
+    "defocus_blur": {
+      "accuracy": 0.8905555605888367,
+      "macro_f1": 0.8799104573636818,
+      "per_class": {
+        "crack": {
+          "precision": 1.0,
+          "recall": 0.9888888888888889,
+          "f1-score": 0.994413407821229,
+          "support": 360.0
+        },
+        "hole": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "normal": {
+          "precision": 0.6844106463878327,
+          "recall": 1.0,
+          "f1-score": 0.8126410835214447,
+          "support": 360.0
+        },
+        "rust": {
+          "precision": 1.0,
+          "recall": 0.4638888888888889,
+          "f1-score": 0.6337760910815939,
+          "support": 360.0
+        },
+        "scratch": {
+          "precision": 0.9207161125319693,
+          "recall": 1.0,
+          "f1-score": 0.9587217043941412,
+          "support": 360.0
+        },
+        "accuracy": 0.8905555555555555,
+        "macro avg": {
+          "precision": 0.9210253517839604,
+          "recall": 0.8905555555555555,
+          "f1-score": 0.8799104573636818,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.9210253517839604,
+          "recall": 0.8905555555555555,
+          "f1-score": 0.8799104573636818,
+          "support": 1800.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          356,
+          0,
+          3,
+          0,
+          1
+        ],
+        [
+          0,
+          360,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          360,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          163,
+          167,
+          30
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          360
+        ]
+      ],
+      "false_accept_count": 166,
+      "false_reject_count": 0,
+      "false_accept_rate": 0.11527777777777778,
+      "false_reject_rate": 0.0,
+      "mean_confidence": 0.9927382469177246
+    },
+    "combined_hard": {
+      "accuracy": 0.9016666412353516,
+      "macro_f1": 0.8998459639588322,
+      "per_class": {
+        "crack": {
+          "precision": 0.7960088691796009,
+          "recall": 0.9972222222222222,
+          "f1-score": 0.8853267570900123,
+          "support": 360.0
+        },
+        "hole": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 360.0
+        },
+        "normal": {
+          "precision": 0.8106508875739645,
+          "recall": 0.7611111111111111,
+          "f1-score": 0.7851002865329513,
+          "support": 360.0
+        },
+        "rust": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1-score": 0.8571428571428571,
+          "support": 360.0
+        },
+        "scratch": {
+          "precision": 0.9448818897637795,
+          "recall": 1.0,
+          "f1-score": 0.97165991902834,
+          "support": 360.0
+        },
+        "accuracy": 0.9016666666666666,
+        "macro avg": {
+          "precision": 0.9103083293034689,
+          "recall": 0.9016666666666666,
+          "f1-score": 0.8998459639588322,
+          "support": 1800.0
+        },
+        "weighted avg": {
+          "precision": 0.9103083293034689,
+          "recall": 0.9016666666666666,
+          "f1-score": 0.8998459639588321,
+          "support": 1800.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          359,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          360,
+          0,
+          0,
+          0
+        ],
+        [
+          86,
+          0,
+          274,
+          0,
+          0
+        ],
+        [
+          6,
+          0,
+          63,
+          270,
+          21
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          360
+        ]
+      ],
+      "false_accept_count": 64,
+      "false_reject_count": 86,
+      "false_accept_rate": 0.044444444444444446,
+      "false_reject_rate": 0.2388888888888889,
+      "mean_confidence": 0.9751901626586914
+    }
+  },
+  "temperature": 0.34401872754096985
+}

@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: eidss-governance-gateway
+  datasource:
+    url: jdbc:h2:mem:eidss-gateway;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 25MB
+      max-request-size: 25MB
+      # Spool nothing to disk. Spring's default threshold of 0 writes every
+      # uploaded part to java.io.tmpdir, which silently yielded empty parts in
+      # the container image (uploads arrived at the backend with no file field
+      # while the same jar worked on the host). Inspection images are well
+      # under this ceiling, so keeping them in memory removes the dependency
+      # on a writable temp directory entirely.
+      file-size-threshold: 30MB
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+
+eidss:
+  backend:
+    url: ${BACKEND_URL:http://localhost:8000}
+  jwt:
+    secret: ${JWT_SECRET:eidss-governance-gateway-dev-secret-key-change-me-in-prod-2026}
+    expiration-hours: 8
+  cors:
+    allowed-origin: ${FRONTEND_URL:http://localhost:5173}
+
+logging:
+  level:
+    com.eidss.gateway: INFO

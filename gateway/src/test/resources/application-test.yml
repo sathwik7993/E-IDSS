@@ -1,0 +1,12 @@
+eidss:
+  backend:
+    url: http://localhost:0
+  jwt:
+    secret: test-secret-key-for-gateway-tests-must-be-at-least-32-bytes-long
+    expiration-hours: 8
+  cors:
+    allowed-origin: http://localhost:5173
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:eidss-gateway-test;DB_CLOSE_DELAY=-1

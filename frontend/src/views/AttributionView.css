@@ -1,0 +1,162 @@
+.attribution-view {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribution-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+}
+
+.attribution-header .section-title {
+  margin-bottom: 0;
+}
+
+.attribution-badges {
+  display: flex;
+  gap: var(--sp-2);
+  flex-wrap: wrap;
+}
+
+.attribution-caption {
+  font-size: var(--text-13);
+  color: var(--text-2);
+  margin: var(--sp-3) 0 var(--sp-5);
+}
+
+.attribution-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: var(--sp-8);
+  align-items: start;
+}
+
+.attribution-grid > section {
+  min-width: 0;
+}
+
+.attribution-target {
+  font-size: var(--text-13);
+  color: var(--text-2);
+  margin-bottom: var(--sp-3);
+}
+
+.attribution-target strong {
+  color: var(--text-0);
+}
+
+.shap-chart {
+  border: 1px solid var(--hairline);
+  border-radius: var(--radius-card);
+  padding: var(--sp-3) var(--sp-3) var(--sp-2);
+  background: var(--surface);
+}
+
+.shap-axis-label {
+  font-size: var(--text-11);
+  font-weight: var(--weight-semibold);
+  color: var(--text-2);
+  text-align: center;
+  margin-top: var(--sp-1);
+}
+
+.shap-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-5);
+  margin-top: var(--sp-3);
+  font-size: var(--text-12);
+  color: var(--text-2);
+}
+
+.shap-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ── Root-cause driver list ───────────────────────────── */
+.driver-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+
+.driver-list li {
+  font-size: var(--text-13);
+  color: var(--text-1);
+  line-height: 1.5;
+}
+
+.driver-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: var(--text-10);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: var(--danger-strong);
+  background: var(--danger-tint);
+  border: 1px solid var(--danger-border);
+  border-radius: var(--radius-control);
+  padding: 1px 6px;
+  margin-right: var(--sp-2);
+}
+
+.drift-heading {
+  margin-top: var(--sp-6);
+}
+
+.drift-label {
+  font-weight: var(--weight-bold);
+  color: var(--text-0);
+}
+
+.drift-value {
+  font-size: var(--text-14);
+  color: var(--text-1);
+}
+
+.drift-value strong {
+  color: var(--text-0);
+}
+
+.drift-high {
+  color: var(--danger-strong);
+  font-weight: var(--weight-bold);
+}
+
+.drift-low {
+  color: var(--warn-deep);
+  font-weight: var(--weight-bold);
+}
+
+.drift-nominal {
+  color: var(--text-2);
+  font-size: var(--text-12);
+  margin-top: 2px;
+}
+
+.attribution-footnote {
+  font-size: var(--text-12);
+  color: var(--text-2);
+  margin-top: var(--sp-3);
+}
+
+@media (max-width: 1100px) {
+  .attribution-grid {
+    grid-template-columns: 1fr;
+  }
+}

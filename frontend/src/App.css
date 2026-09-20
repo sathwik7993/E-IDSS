@@ -1,0 +1,159 @@
+.app-shell {
+  display: flex;
+  min-height: 100%;
+  align-items: stretch;
+}
+
+.app-main {
+  flex: 1;
+  min-width: 0;
+  max-width: var(--content-max-width);
+  padding: var(--sp-8) var(--sp-8) var(--sp-10);
+}
+
+/* ── Banner: the one place brand appears ──────────────── */
+.app-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--sp-6);
+  flex-wrap: wrap;
+  border-bottom: 2px solid var(--slate-900);
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+}
+
+.banner-eyebrow {
+  font-size: var(--text-11);
+  font-weight: var(--weight-bold);
+  color: var(--text-1);
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.banner-title {
+  font-size: var(--text-34);
+  font-weight: var(--weight-black);
+  color: var(--text-0);
+  letter-spacing: -0.8px;
+  line-height: 1.1;
+}
+
+.banner-subtitle {
+  font-size: var(--text-15);
+  color: var(--text-2);
+  margin-top: 4px;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: var(--surface-alt);
+  border: 1px solid var(--hairline-strong);
+  border-radius: var(--radius-card);
+  padding: 6px 14px;
+  font-family: var(--font-mono);
+  font-size: var(--text-13);
+  font-weight: var(--weight-semibold);
+  color: var(--text-0);
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ok);
+  flex-shrink: 0;
+}
+
+.status-chip.offline .status-dot {
+  background: var(--danger-edge);
+}
+
+/* ── Executive KPI strip ──────────────────────────────── */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sp-4);
+  margin-bottom: var(--sp-8);
+}
+
+/* ── Tabs ─────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: var(--sp-4);
+  border-bottom: 1px solid var(--hairline);
+  margin-bottom: var(--sp-6);
+  overflow-x: auto;
+}
+
+.tab-item {
+  position: relative;
+  padding: var(--sp-2) 0 var(--sp-3);
+  font-size: var(--text-12);
+  font-weight: var(--weight-semibold);
+  color: var(--text-2);
+  white-space: nowrap;
+  transition: color var(--duration-micro) var(--ease-ui);
+}
+
+.tab-item:hover {
+  color: var(--text-1);
+}
+
+.tab-item.active {
+  color: var(--text-0);
+}
+
+.tab-item.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: var(--slate-900);
+}
+
+.tab-panel {
+  animation: panel-enter 260ms var(--ease-ui);
+}
+
+@keyframes panel-enter {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .app-shell {
+    flex-direction: column;
+  }
+  .telemetry-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .app-main {
+    padding: var(--sp-6) var(--sp-5) var(--sp-10);
+  }
+  .kpi-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .kpi-strip {
+    grid-template-columns: 1fr;
+  }
+  .banner-title {
+    font-size: var(--text-29);
+  }
+}

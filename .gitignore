@@ -1,0 +1,44 @@
+# --- secrets (NEVER commit) --------------------------------------------
+.env
+.env.local
+*.env
+!.env.example
+kaggle.json
+.kaggle/
+*.pem
+*.key
+
+# --- data & model artifacts --------------------------------------------
+train/
+data/raw/
+data/processed/
+models/*.pt
+models/*.pth
+models/*.onnx
+*.ckpt
+defect_detection.zip
+
+# --- python -------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# --- node / frontend ----------------------------------------------------
+node_modules/
+dist/
+.vite/
+
+# --- working notes (not part of the deliverable) ------------------------
+e-idss-handoff.md
+claude.md
+uidesignrules.md
+existui.md
+
+# --- os / editor --------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
